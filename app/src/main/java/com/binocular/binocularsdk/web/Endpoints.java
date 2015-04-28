@@ -75,7 +75,7 @@ public class Endpoints {
         return new IEndpoint() {
             @Override
             public HttpUriRequest getHttpRequest() {
-                return defineHeader(new HttpGet(BASE_URL + "devicetypes?api_key=" + Credentials.getApiKey()));
+                return defineHeader(new HttpGet(BASE_URL + "devicetypes"));
             }
         };
     }
@@ -87,7 +87,7 @@ public class Endpoints {
         return new IEndpoint() {
             @Override
             public HttpUriRequest getHttpRequest() {
-                return defineHeader(new HttpGet(BASE_URL + "devicetypes/"+devicetypeId+"/devices?api_key=" + Credentials.getApiKey()));
+                return defineHeader(new HttpGet(BASE_URL + "devicetypes/"+devicetypeId+"/devices"));
             }
         };
     }
@@ -100,7 +100,7 @@ public class Endpoints {
         return new IEndpoint() {
             @Override
             public HttpUriRequest getHttpRequest() {
-                return defineHeader(new HttpGet(BASE_URL + "devices/"+deviceId+"?api_key=" + Credentials.getApiKey()));
+                return defineHeader(new HttpGet(BASE_URL + "devices/"+deviceId));
             }
         };
     }
@@ -113,7 +113,7 @@ public class Endpoints {
         return new IEndpoint() {
             @Override
             public HttpUriRequest getHttpRequest() {
-                return defineHeader(new HttpGet(BASE_URL + "data/"+dataEntryId+"?api_key=" + Credentials.getApiKey()));
+                return defineHeader(new HttpGet(BASE_URL + "data/"+dataEntryId));
             }
         };
     }
@@ -126,7 +126,7 @@ public class Endpoints {
         return new IEndpoint() {
             @Override
             public HttpUriRequest getHttpRequest() {
-                return defineHeader(new HttpGet(BASE_URL + "devices/"+deviceId+"/data?api_key=" + Credentials.getApiKey()));
+                return defineHeader(new HttpGet(BASE_URL + "devices/"+deviceId+"/data"));
             }
         };
     }
@@ -140,7 +140,7 @@ public class Endpoints {
             @Override
             public HttpUriRequest getHttpRequest() {
 
-                HttpPost post = new HttpPost(BASE_URL + "devices/data?api_key=" + Credentials.getApiKey());
+                HttpPost post = new HttpPost(BASE_URL + "devices/data");
                 post.setEntity(getAsEntities(devices));
 
                 return defineHeader(post);
@@ -155,7 +155,7 @@ public class Endpoints {
         return new IEndpoint() {
             @Override
             public HttpUriRequest getHttpRequest() {
-                return defineHeader(new HttpGet(BASE_URL + "devices?api_key=" + Credentials.getApiKey()));
+                return defineHeader(new HttpGet(BASE_URL + "devices"));
             }
         };
     }
@@ -170,7 +170,7 @@ public class Endpoints {
             @Override
             public HttpUriRequest getHttpRequest() {
 
-                HttpPost post = new HttpPost(BASE_URL + "devices/"+deviceId+"/data?api_key=" + Credentials.getApiKey());
+                HttpPost post = new HttpPost(BASE_URL + "devices/"+deviceId+"/data");
                 try {
                     post.setEntity(new StringEntity(json));
                 } catch (UnsupportedEncodingException e) {
@@ -190,7 +190,7 @@ public class Endpoints {
         return new IEndpoint() {
             @Override
             public HttpUriRequest getHttpRequest() {
-                return defineHeader(new HttpGet(BASE_URL + "devices/"+deviceId+"/flags?api_key=" + Credentials.getApiKey()));
+                return defineHeader(new HttpGet(BASE_URL + "devices/"+deviceId+"/flags"));
             }
         };
     }
@@ -205,7 +205,7 @@ public class Endpoints {
             @Override
             public HttpUriRequest getHttpRequest() {
 
-                HttpPost post = new HttpPost(BASE_URL + "devices/"+deviceId+"/flags?api_key=" + Credentials.getApiKey());
+                HttpPost post = new HttpPost(BASE_URL + "devices/"+deviceId+"/flags");
                 try {
                     post.setEntity(new StringEntity(json));
                 } catch (UnsupportedEncodingException e) {
@@ -226,7 +226,7 @@ public class Endpoints {
         return new IEndpoint() {
             @Override
             public HttpUriRequest getHttpRequest() {
-                return defineHeader(new HttpGet(BASE_URL + "devices/"+deviceId+"/heartbeat?api_key=" + Credentials.getApiKey()));
+                return defineHeader(new HttpGet(BASE_URL + "devices/"+deviceId+"/heartbeat"));
             }
         };
     }
@@ -240,7 +240,7 @@ public class Endpoints {
             @Override
             public HttpUriRequest getHttpRequest() {
 
-                HttpPost post = new HttpPost(BASE_URL + "devicetypes/"+deviceTypeId+"/activate_device?api_key=" + Credentials.getApiKey());
+                HttpPost post = new HttpPost(BASE_URL + "devicetypes/"+deviceTypeId+"/activate_device");
                 return defineHeader(post);
             }
         };
