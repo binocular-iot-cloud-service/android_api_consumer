@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class Endpoints {
 
-    private static String BASE_URL = "http://api.binocular.se/v1/";
+    private static String BASE_URL = "https://api.binocular.se/v1/";
 
     /**
     * Sets the header with authentication and JSON
